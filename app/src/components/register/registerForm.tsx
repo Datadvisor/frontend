@@ -225,7 +225,7 @@ export default function RegisterForm() {
 										</div>
 
 										<div className="text-sm">
-											<a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
+											<a href="/forgot_password" className="font-medium text-indigo-600 hover:text-indigo-500">
 												Forgot your password?
 											</a>
 										</div>

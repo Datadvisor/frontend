@@ -48,15 +48,20 @@ export default function Reset() {
                         focus:text-gray-500 focus:outline-none focus:border-gray-200 rounded-xl"
 						></input>
 					</div>
-					<button
+					<a
+						href="/"
 						type="submit"
 						className=" whitespace-nowrap justify-center px-20 py-2.5 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-505"
-						onClick={() => handleClick()}
+						
 					>
 						RESET YOUR PASSWORD
-					</button>
+					</a>
 				</form>
-				<a>go back to login</a>
+				<div className="text-sm">
+					<a href="/register" className="font-medium text-indigo-600 hover:text-indigo-500">
+                        go back to login
+					</a>
+				</div>
 			</div>
 			<div className="p-60">
 				<svg width="737" height="450" viewBox="0 0 737 450" fill="none" xmlns="http://www.w3.org/2000/svg">
