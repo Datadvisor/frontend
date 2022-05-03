@@ -1,8 +1,28 @@
 import { useState } from 'react';
 import { CheckCircleIcon, XIcon } from '@heroicons/react/outline';
 
+/**
+ * This Type represent the contact form
+ */
+type formType = {
+	'first-name': string,
+	'last-name': string,
+	email: string,
+	company: string,
+	phone: string,
+	'how-can-we-help': string,
+	topic: string,
+}
+
+/**
+ * This function is used to represent the Contact's page
+ * @constructor
+ */
 export default function ContactForm() {
-	const [formContent, setFormContent] = useState({
+	/**
+	 * Contain the users contact information
+	 */
+	const [formContent, setFormContent] = useState<formType>({
 		'first-name': '',
 		'last-name': '',
 		email: '',
@@ -12,7 +32,10 @@ export default function ContactForm() {
 		topic: 'other',
 	});
 
-	const [errorsContent, setErrorsContent] = useState({
+	/**
+	 * Contain every error related for each field of the form
+	 */
+	const [errorsContent, setErrorsContent] = useState<formType>({
 		'first-name': '',
 		'last-name': '',
 		email: '',
@@ -22,10 +45,16 @@ export default function ContactForm() {
 		topic: 'other',
 	});
 
-	const [formSended, setFormSended] = useState(false);
+	/**
+	 * This allows to display the confirmation of the sended mail
+	 */
+	const [formSended, setFormSended] = useState<boolean>(false);
 
+	/**
+	 * Call this function whenever you want to check if there is error on each field of the FormContent content
+	 */
 	const updateErrors = () => {
-		const formState = {
+		const formState: formType = {
 			'first-name': '',
 			'last-name': '',
 			email: '',
@@ -45,6 +74,9 @@ export default function ContactForm() {
 		setErrorsContent(formState);
 	};
 
+	/**
+	 * It Allows changing FormContent dynamically
+	 */
 	const onChange = (e: any) => {
 		setFormContent({
 			...formContent,
@@ -52,6 +84,9 @@ export default function ContactForm() {
 		});
 	};
 
+	/**
+	 * This Function is trigger whenever the user Press the Submit Button
+	 */
 	const onClick = (e: any) => {
 		e.preventDefault();
 		updateErrors();
@@ -327,7 +362,7 @@ export default function ContactForm() {
 											onClick={onClick}
 											className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-grape-600 hover:bg-grape-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-grape-500"
 										>
-											Submit
+											Envoyer
 										</button>
 										{formSended && (
 											<div className="mt-6 rounded-md bg-green-50 p-4 transition-all     animate-pulse">
