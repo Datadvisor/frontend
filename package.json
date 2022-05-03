@@ -1,9 +1,9 @@
 {
-  "name": "next-template",
+  "name": "frontend",
   "version": "1.0.0",
-  "description": "A template, for your next project. Including typescript, eslint and prettier.",
+  "description": "Frontend for Datadvisor",
   "author": "Lorenzo Carneli",
-  "repository": "https://github.com/MrZalTy/next-template",
+  "repository": "https://github.com/Datadvisor/frontend",
   "license": "MIT",
   "private": true,
   "scripts": {
