@@ -4,15 +4,15 @@ import { CheckCircleIcon, XIcon } from '@heroicons/react/outline';
 /**
  * This Type represent the contact form
  */
-type formType = {
-	'first-name': string,
-	'last-name': string,
-	email: string,
-	company: string,
-	phone: string,
-	'how-can-we-help': string,
-	topic: string,
-}
+type FormType = {
+	'first-name': string;
+	'last-name': string;
+	email: string;
+	company: string;
+	phone: string;
+	'how-can-we-help': string;
+	topic: string;
+};
 
 /**
  * This function is used to represent the Contact's page
@@ -22,7 +22,7 @@ export default function ContactForm() {
 	/**
 	 * Contain the users contact information
 	 */
-	const [formContent, setFormContent] = useState<formType>({
+	const [formContent, setFormContent] = useState<FormType>({
 		'first-name': '',
 		'last-name': '',
 		email: '',
@@ -35,7 +35,7 @@ export default function ContactForm() {
 	/**
 	 * Contain every error related for each field of the form
 	 */
-	const [errorsContent, setErrorsContent] = useState<formType>({
+	const [errorsContent, setErrorsContent] = useState<FormType>({
 		'first-name': '',
 		'last-name': '',
 		email: '',
@@ -54,7 +54,7 @@ export default function ContactForm() {
 	 * Call this function whenever you want to check if there is error on each field of the FormContent content
 	 */
 	const updateErrors = () => {
-		const formState: formType = {
+		const formState: FormType = {
 			'first-name': '',
 			'last-name': '',
 			email: '',
@@ -67,8 +67,8 @@ export default function ContactForm() {
 		else formState['first-name'] = '';
 		if (formContent['last-name'] === '') formState['last-name'] = 'Le nom ne peux être vide';
 		else formState['last-name'] = '';
-		if (formContent['email'] === '') formState['email'] = 'Le mail ne peux être vide';
-		else formState['email'] = '';
+		if (formContent.email === '') formState.email = 'Le mail ne peux être vide';
+		else formState.email = '';
 		if (formContent['how-can-we-help'] === '') formState['how-can-we-help'] = 'Le contenu ne peux être vide';
 		else formState['how-can-we-help'] = '';
 		setErrorsContent(formState);
@@ -93,7 +93,7 @@ export default function ContactForm() {
 		if (
 			formContent['first-name'] === '' ||
 			formContent['last-name'] === '' ||
-			formContent['email'] === '' ||
+			formContent.email === '' ||
 			formContent['how-can-we-help'] === ''
 		) {
 			console.log('failed');
@@ -112,8 +112,8 @@ export default function ContactForm() {
 							Contactez Datadvisor
 						</h1>
 						<p className="mt-6 max-w-3xl mx-auto text-xl leading-normal text-gray-500 text-center">
-							Notre équipe se fera un plaisir de répondre à vos questions ou de discuter avec vous d'un
-							potentiel partenariat avec votre projet
+							Notre équipe se fera un plaisir de répondre à vos questions ou de discuter avec vous
+							d&apos;un potentiel partenariat avec votre projet
 						</p>
 					</div>
 				</div>
@@ -137,8 +137,8 @@ export default function ContactForm() {
 								</h2>
 								<p className="mt-4 text-lg text-gray-500 sm:mt-3">
 									Notre équipe est très soucieuse de notre service client / relation entreprise. Il
-									est inscrit dans l'ADN de notre workflow que la collaboration est une étape clé vers
-									la réussite
+									est inscrit dans l&apos;ADN de notre workflow que la collaboration est une étape clé
+									vers la réussite
 								</p>
 								<form
 									action="#"
@@ -200,7 +200,7 @@ export default function ContactForm() {
 										</label>
 										<div className="mt-1">
 											<input
-												value={formContent['email']}
+												value={formContent.email}
 												onChange={onChange}
 												id="email"
 												name="email"
@@ -208,12 +208,12 @@ export default function ContactForm() {
 												autoComplete="email"
 												className="block w-full shadow-sm sm:text-sm focus:ring-grape-500 focus:border-grape-500 border-gray-300 rounded-md"
 											/>
-											{errorsContent['email'] && (
+											{errorsContent.email && (
 												<label
 													htmlFor="email"
 													className="block text-sm font-medium text-red-700"
 												>
-													{errorsContent['email']}
+													{errorsContent.email}
 												</label>
 											)}
 										</div>
@@ -233,7 +233,7 @@ export default function ContactForm() {
 
 										<div className="mt-1">
 											<input
-												value={formContent['company']}
+												value={formContent.company}
 												onChange={onChange}
 												type="text"
 												name="company"
@@ -254,7 +254,7 @@ export default function ContactForm() {
 										</div>
 										<div className="mt-1">
 											<input
-												value={formContent['phone']}
+												value={formContent.phone}
 												onChange={onChange}
 												type="text"
 												name="phone"
