@@ -63,13 +63,13 @@ export default function ContactForm() {
 			'how-can-we-help': '',
 			topic: 'other',
 		};
-		if (formContent['first-name'] === '') formState['first-name'] = 'Le prénom ne peux être vide';
+		if (formContent['first-name'] === '') formState['first-name'] = 'Le prénom ne peut être vide';
 		else formState['first-name'] = '';
-		if (formContent['last-name'] === '') formState['last-name'] = 'Le nom ne peux être vide';
+		if (formContent['last-name'] === '') formState['last-name'] = 'Le nom ne peut être vide';
 		else formState['last-name'] = '';
-		if (formContent.email === '') formState.email = 'Le mail ne peux être vide';
+		if (formContent.email === '') formState.email = 'Le mail ne peut être vide';
 		else formState.email = '';
-		if (formContent['how-can-we-help'] === '') formState['how-can-we-help'] = 'Le contenu ne peux être vide';
+		if (formContent['how-can-we-help'] === '') formState['how-can-we-help'] = 'Le contenu ne peut être vide';
 		else formState['how-can-we-help'] = '';
 		setErrorsContent(formState);
 	};

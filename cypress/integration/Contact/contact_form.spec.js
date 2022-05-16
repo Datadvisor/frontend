@@ -12,10 +12,10 @@ describe('Contact Form', () => {
     cy.visit('http://localhost:3000/contact')
     cy.contains('Envoyer').click()
 
-    cy.contains('Le prénom ne peux être vide')
-    cy.contains('Le nom ne peux être vide')
-    cy.contains('Le mail ne peux être vide')
-    cy.contains('Le contenu ne peux être vide')
+    cy.contains('Le prénom ne peut être vide')
+    cy.contains('Le nom ne peut être vide')
+    cy.contains('Le mail ne peut être vide')
+    cy.contains('Le contenu ne peut être vide')
   })
 
   it('Check first name error', () => {
@@ -27,9 +27,9 @@ describe('Contact Form', () => {
 
     cy.contains('Envoyer').click()
 
-    cy.contains('Le nom ne peux être vide')
-    cy.contains('Le mail ne peux être vide')
-    cy.contains('Le contenu ne peux être vide')
+    cy.contains('Le nom ne peut être vide')
+    cy.contains('Le mail ne peut être vide')
+    cy.contains('Le contenu ne peut être vide')
   })
 
   it('Check last name error', () => {
@@ -41,9 +41,9 @@ describe('Contact Form', () => {
 
     cy.contains('Envoyer').click()
 
-    cy.contains('Le prénom ne peux être vide')
-    cy.contains('Le mail ne peux être vide')
-    cy.contains('Le contenu ne peux être vide')
+    cy.contains('Le prénom ne peut être vide')
+    cy.contains('Le mail ne peut être vide')
+    cy.contains('Le contenu ne peut être vide')
   })
 
   it('Check email error', () => {
@@ -55,9 +55,9 @@ describe('Contact Form', () => {
 
     cy.contains('Envoyer').click()
 
-    cy.contains('Le prénom ne peux être vide')
-    cy.contains('Le nom ne peux être vide')
-    cy.contains('Le contenu ne peux être vide')
+    cy.contains('Le prénom ne peut être vide')
+    cy.contains('Le nom ne peut être vide')
+    cy.contains('Le contenu ne peut être vide')
   })
 
   it('Check contenu error', () => {
@@ -69,9 +69,9 @@ describe('Contact Form', () => {
 
     cy.contains('Envoyer').click()
 
-    cy.contains('Le prénom ne peux être vide')
-    cy.contains('Le nom ne peux être vide')
-    cy.contains('Le mail ne peux être vide')
+    cy.contains('Le prénom ne peut être vide')
+    cy.contains('Le nom ne peut être vide')
+    cy.contains('Le mail ne peut être vide')
   })
 
   it('Check validity sucess', () => {
