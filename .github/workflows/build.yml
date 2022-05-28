@@ -29,6 +29,9 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
+        working-directory: app
 
       - name: Build project
         run: yarn build
+        working-directory: app
+

@@ -29,6 +29,8 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
+        working-directory: app
 
       - name: Run linter
         run: yarn lint
+        working-directory: app
