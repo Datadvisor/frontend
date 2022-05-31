@@ -229,13 +229,13 @@ export default function NavBar() {
 							href="#"
 							className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
 						>
-							Connexion
+							Sign in
 						</a>
 						<a
-							href="#"
+							href="/register"
 							className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
 						>
-							Inscription
+							Sign up
 						</a>
 					</div>
 				</div>
@@ -305,15 +305,15 @@ export default function NavBar() {
 							</div>
 							<div>
 								<a
-									href="#"
+									href="/register"
 									className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
 								>
-									Inscription
+									Sign up
 								</a>
 								<p className="mt-6 text-center text-base font-medium text-gray-500">
 									Déjà membre?{' '}
 									<a href="#" className="text-indigo-600 hover:text-indigo-500">
-										Connexion
+										Sign in
 									</a>
 								</p>
 							</div>
