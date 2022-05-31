@@ -1,7 +1,20 @@
 import Image from 'next/image';
+import { SetStateAction, useState } from 'react';
 import logo from '../../public/logo.png';
 
 export default function Reset() {
+	const [password, setPassword] = useState('password');
+	const [confirm, setConfirm] = useState('confirm');
+	const handleChangePass = (e: { target: { value: SetStateAction<string> } }) => {
+		setPassword(e.target.value);
+	};
+	const handleChangeConfirm = (e: { target: { value: SetStateAction<string> } }) => {
+		setConfirm(e.target.value);
+	};
+	function handleClick() {
+		if (password === confirm) return alert('Confirmed Password');
+		return alert('password not confirmed');
+	}
 	return (
 		<div className="bg-gray-100 relative mx-auto h-full flex flex-row">
 			<div className="p-12 2xl:w-3/12 h-screen bg-white rounded-lg shadow-md lg:shadow-lg">
@@ -12,6 +25,9 @@ export default function Reset() {
 					<div className="rounded-md shadow-sm -space-y-px">
 						<div className="">new password</div>
 						<input
+							id="password"
+							type="password"
+							onChange={handleChangePass}
 							placeholder="new password"
 							className="block w-full py-3 px-3 mt-2
                         text-gray-800 appearance-none
@@ -22,6 +38,9 @@ export default function Reset() {
 					<div>
 						<div>confirm new password</div>
 						<input
+							id="confirm"
+							type="password"
+							onChange={handleChangeConfirm}
 							placeholder="confirm new password"
 							className="block w-full py-3 px-3 mt-2
                         text-gray-800 appearance-none
@@ -32,6 +51,7 @@ export default function Reset() {
 					<button
 						type="submit"
 						className=" whitespace-nowrap justify-center px-20 py-2.5 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-505"
+						onClick={() => handleClick()}
 					>
 						RESET YOUR PASSWORD
 					</button>
