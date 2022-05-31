@@ -35,10 +35,10 @@ export default function RegisterForm() {
 	const onClick = async (e: any) => {
 		e.preventDefault();
 		if (
-			formContent['firstName'] === '' ||
-			formContent['lastName'] === '' ||
-			formContent['email'] === '' ||
-			formContent['password'] !== formContent['passwordVerif']
+			formContent.firstName === '' ||
+			formContent.lastName === '' ||
+			formContent.email === '' ||
+			formContent.password !== formContent.passwordVerif
 		) {
 			toast.error('Passwords are not identical', {
 				position: 'bottom-right',
@@ -83,8 +83,8 @@ export default function RegisterForm() {
 				password: '',
 				passwordVerif: '',
 			});
-		} catch (e: any) {
-			toast.error(e.response.data.error.message, {
+		} catch (error: any) {
+			toast.error(error.response.data ? error.response.data.error.message : 'Error with server', {
 				position: 'bottom-right',
 				autoClose: 5000,
 				hideProgressBar: false,
@@ -127,7 +127,7 @@ export default function RegisterForm() {
 													id="lastName"
 													name="lastName"
 													type="text"
-													value={formContent['lastName']}
+													value={formContent.lastName}
 													onChange={onChange}
 													required
 													className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
@@ -146,7 +146,7 @@ export default function RegisterForm() {
 													id="firstName"
 													name="firstName"
 													type="text"
-													value={formContent['firstName']}
+													value={formContent.firstName}
 													onChange={onChange}
 													required
 													className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
@@ -164,7 +164,7 @@ export default function RegisterForm() {
 												id="email"
 												name="email"
 												type="email"
-												value={formContent['email']}
+												value={formContent.email}
 												onChange={onChange}
 												required
 												className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
@@ -181,7 +181,7 @@ export default function RegisterForm() {
 												id="password"
 												name="password"
 												type="password"
-												value={formContent['password']}
+												value={formContent.password}
 												onChange={onChange}
 												autoComplete="current-password"
 												required
@@ -202,7 +202,7 @@ export default function RegisterForm() {
 												id="passwordVerif"
 												name="passwordVerif"
 												type="password"
-												value={formContent['passwordVerif']}
+												value={formContent.passwordVerif}
 												onChange={onChange}
 												autoComplete="current-password"
 												required
@@ -236,7 +236,7 @@ export default function RegisterForm() {
 											type="submit"
 											className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 										>
-											Sign up
+											Create your account
 										</button>
 									</div>
 								</form>
