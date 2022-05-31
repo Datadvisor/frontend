@@ -45,7 +45,7 @@ const resources = [
 	{
 		name: 'Contactez nous',
 		description: "Besoin d'assistance, envie de faire un partenariat ?",
-		href: '#',
+		href: 'contact',
 		icon: SupportIcon,
 	},
 	{
@@ -73,7 +73,7 @@ export default function NavBar() {
 				<div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
 					<div className="flex items-center justify-start lg:w-0 lg:flex-1">
 						<Image src={logo} alt="Logo" className="h-8 w-auto sm:h-10" width={70} height={70} />
-						<a href="#">
+						<a href="/">
 							<span className="sr-only">Datadvisor</span>
 							<h1 className={'text-3xl font-extrabold text-indigo-600'}>Datadvisor</h1>
 						</a>
@@ -216,7 +216,7 @@ export default function NavBar() {
 														</a>
 													))}
 												</div>
-												<div className="px-5 py-5 bg-gray-50 sm:px-8 sm:py-5"></div>
+												<div className="px-5 py-5 bg-gray-50 sm:px-8 sm:py-5" />
 											</div>
 										</Popover.Panel>
 									</Transition>
