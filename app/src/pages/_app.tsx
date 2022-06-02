@@ -3,12 +3,15 @@ import '../../styles/globals.css';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { ToastContainer, toast } from 'react-toastify';
+import { UserContextProvider } from '../context/user/userContext';
 
 function App({ Component, pageProps }: AppProps) {
 	return (
 		<>
-			<Component {...pageProps} />
-			<ToastContainer />
+			<UserContextProvider>
+				<Component {...pageProps} />
+				<ToastContainer />
+			</UserContextProvider>
 		</>
 	);
 }

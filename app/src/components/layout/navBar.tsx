@@ -1,5 +1,4 @@
-/* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from 'react';
+import { Fragment, useContext, useEffect } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import {
 	BookmarkAltIcon,
@@ -13,7 +12,7 @@ import {
 	SearchIcon,
 } from '@heroicons/react/outline';
 import { ChevronDownIcon } from '@heroicons/react/solid';
-
+import { UserContext } from '../../context/user/userContext';
 import Image from 'next/image';
 import logo from '../../../public/logo.png';
 
@@ -67,6 +66,12 @@ function classNames(...classes: any) {
 }
 
 export default function NavBar() {
+	const userContext = useContext(UserContext);
+
+	useEffect(() => {
+		if (userContext.logUser) userContext.logUser();
+	}, []);
+
 	return (
 		<Popover className="relative bg-white">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -224,20 +229,31 @@ export default function NavBar() {
 							)}
 						</Popover>
 					</Popover.Group>
-					<div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-						<a
-							href="#"
-							className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
-						>
-							Sign in
-						</a>
-						<a
-							href="/register"
-							className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
-						>
-							Sign up
-						</a>
-					</div>
+					{userContext.user ? (
+						<div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+							<a
+								href="/login"
+								className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+							>
+								{userContext.user.firstName}
+							</a>
+						</div>
+					) : (
+						<div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+							<a
+								href="/login"
+								className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+							>
+								Sign in
+							</a>
+							<a
+								href="/register"
+								className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+							>
+								Sign up
+							</a>
+						</div>
+					)}
 				</div>
 			</div>
 
@@ -303,20 +319,31 @@ export default function NavBar() {
 									</a>
 								))}
 							</div>
-							<div>
-								<a
-									href="/register"
-									className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
-								>
-									Sign up
-								</a>
-								<p className="mt-6 text-center text-base font-medium text-gray-500">
-									Déjà membre?{' '}
-									<a href="#" className="text-indigo-600 hover:text-indigo-500">
-										Sign in
+							{userContext.user ? (
+								<div>
+									<a
+										href="/register"
+										className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+									>
+										{userContext.user.firstName}
 									</a>
-								</p>
-							</div>
+								</div>
+							) : (
+								<div>
+									<a
+										href="/register"
+										className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+									>
+										Sign up
+									</a>
+									<p className="mt-6 text-center text-base font-medium text-gray-500">
+										Déjà membre?{' '}
+										<a href="/login" className="text-indigo-600 hover:text-indigo-500">
+											Sign in
+										</a>
+									</p>
+								</div>
+							)}
 						</div>
 					</div>
 				</Popover.Panel>
