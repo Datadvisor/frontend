@@ -9,7 +9,6 @@ type FormType = {
 };
 
 import logo from '../../../public/logo.png';
-
 import google_logo from '../../../public/google_logo.png';
 
 const LoginForm = () => {

@@ -1,6 +1,6 @@
 import NavBar from '../components/layout/navBar';
 import Footer from '../components/layout/footer';
-import LoginForm from "../components/login/loginForm"
+import LoginForm from '../components/login/loginForm';
 
 const LandingPage = () => {
 	return (
