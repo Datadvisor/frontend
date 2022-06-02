@@ -226,7 +226,7 @@ export default function NavBar() {
 					</Popover.Group>
 					<div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
 						<a
-							href="#"
+							href="/login"
 							className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
 						>
 							Sign in
@@ -312,7 +312,7 @@ export default function NavBar() {
 								</a>
 								<p className="mt-6 text-center text-base font-medium text-gray-500">
 									Déjà membre?{' '}
-									<a href="#" className="text-indigo-600 hover:text-indigo-500">
+									<a href="/login" className="text-indigo-600 hover:text-indigo-500">
 										Sign in
 									</a>
 								</p>
