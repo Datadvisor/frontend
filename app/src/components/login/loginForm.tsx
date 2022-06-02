@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import Image from 'next/image';
 import { toast } from 'react-toastify';
 
@@ -10,8 +10,10 @@ type FormType = {
 
 import logo from '../../../public/logo.png';
 import google_logo from '../../../public/google_logo.png';
+import { UserContext } from '../../context/user/userContext';
 
 const LoginForm = () => {
+	const userContext = useContext(UserContext);
 	const [formContent, setFormContent] = useState<FormType>({
 		email: '',
 		password: '',
@@ -32,9 +34,10 @@ const LoginForm = () => {
 	 */
 	const onClick = async (e: any) => {
 		e.preventDefault();
+		if (!userContext.setUser) return;
 
 		try {
-			await axios.post(
+			const res = await axios.post(
 				'http://localhost:3001/auth/signin',
 				{
 					email: formContent.email,
@@ -44,9 +47,11 @@ const LoginForm = () => {
 					headers: {
 						'Content-Type': 'application/json',
 					},
+					withCredentials: true,
 				},
 			);
-			toast.success("You're logged in !", {
+			userContext.setUser(res.data);
+			toast.success(`You're logged in ${res.data.firstName}`, {
 				position: 'bottom-right',
 				autoClose: 5000,
 				hideProgressBar: false,
