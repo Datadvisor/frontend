@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Link from 'next/link';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 
@@ -225,9 +226,11 @@ export default function RegisterForm() {
 										</div>
 
 										<div className="text-sm">
-											<a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-												Forgot your password?
-											</a>
+											<Link href="/forgot_password">
+												<a className="font-medium text-indigo-600 hover:text-indigo-500">
+													Forgot your password?
+												</a>
+											</Link>
 										</div>
 									</div>
 

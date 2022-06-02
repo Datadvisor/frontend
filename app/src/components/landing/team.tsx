@@ -4,7 +4,7 @@ const people = [
 		role: 'Chief director executive',
 		imageUrl:
 			'https://media-exp1.licdn.com/dms/image/C5603AQHQ1pwbSFzSig/profile-displayphoto-shrink_400_400/0/1640647614267?e=1654732800&v=beta&t=v0GleiijOw5fT2yGZgqzXgnQYYX8yz6_kulIpV7Lcco',
-		bio: "Anthony est un expert du business. Fondateur de la AM entreprise, il est l'homme de la situation pour gérer l'équipe",
+		bio: 'Anthony is a business expert. Founder of the AM company, he is the right man to manage the team',
 		twitterUrl: '#',
 		linkedinUrl: 'https://www.linkedin.com/in/anthoni-marie/',
 	},
@@ -13,7 +13,7 @@ const people = [
 		role: 'Chief technical executive',
 		imageUrl:
 			'https://media-exp1.licdn.com/dms/image/C4E03AQElZnuUxgz74A/profile-displayphoto-shrink_400_400/0/1583949853800?e=1654732800&v=beta&t=Y-7g4Eh1vcuSsjUp__KT6N5jt2kUOpfzcorRCknk1c8',
-		bio: "Le savoir de Lorenzo en DevOps est pour l'évolution de Datadvisor. Il nous fournis les environnements propice pour le bon dérouler du développement.",
+		bio: "Lorenzo's knowledge in DevOps is for the evolution of Datadvisor. He provides us with the right environments for the development to run smoothly.",
 		twitterUrl: '#',
 		linkedinUrl: 'https://www.linkedin.com/in/lorenzo-carneli/',
 	},
@@ -22,7 +22,7 @@ const people = [
 		role: 'Front-end Master',
 		imageUrl:
 			'https://media-exp1.licdn.com/dms/image/C5603AQGDofprelvp6A/profile-displayphoto-shrink_400_400/0/1611764720103?e=1654732800&v=beta&t=g9aimC3uUiNTPamHeb8ZVoBoUvJjEaIAd9_ccEjmU2g',
-		bio: 'Pitcheur et entrepreneur à ses heures perdues, Roman assure la majorité de la partie Front-end du projet. De Dotenv à Ethers rien ne lui échappe.',
+		bio: 'Pitcher and entrepreneur in his spare time, Roman takes care of most of the front-end part of the project. From Dotenv to Ethers, nothing escapes him.',
 		twitterUrl: '#',
 		linkedinUrl: 'https://www.linkedin.com/in/rgascoin/',
 	},
@@ -31,7 +31,7 @@ const people = [
 		role: 'Data Manager',
 		imageUrl:
 			'https://media-exp1.licdn.com/dms/image/C5603AQFuP71p65aUEQ/profile-displayphoto-shrink_400_400/0/1638489105871?e=1654732800&v=beta&t=Rw4izEV6QCmNxZ5HvM6JxBt73EKmOxU8tqf5NUuyOJo',
-		bio: "Le sorcier du groupe. C'est grâce à Brice qu'Idéfix sait où aller chercher les informations de nos utilisateurs sur internet.",
+		bio: 'The wizard of the group. It is thanks to Brice that Dogmatix knows where to look for information from our users on the Internet.',
 		twitterUrl: '#',
 		linkedinUrl: 'https://www.linkedin.com/in/brice-toffolon/',
 	},
@@ -39,8 +39,8 @@ const people = [
 		name: 'Veronia Mikhail',
 		role: 'Mobile Application & Design',
 		imageUrl:
-			'https://media-exp1.licdn.com/dms/image/D4E35AQGdBeW6GSR6kA/profile-framedphoto-shrink_400_400/0/1642783635755?e=1649437200&v=beta&t=tTqIBmHG74p1P_U-OK9bRy-zVG3_Ip3RwiJ7bsYExMQ',
-		bio: 'Designeuse et développeuse mobile, Veronia est atout précieux pour le groupe.',
+			'https://media-exp2.licdn.com/dms/image/C5603AQFzkermh0Q63g/profile-displayphoto-shrink_400_400/0/1626883161188?e=1659571200&v=beta&t=T0GLW7hG9BMclxz9dQLkyNd3x88T1sQAfpzh1rNlHTY',
+		bio: 'As a mobile designer and developer, Veronia is a valuable asset to the group.',
 		twitterUrl: '#',
 		linkedinUrl: 'https://www.linkedin.com/in/veronia-mikhail/',
 	},
@@ -49,7 +49,7 @@ const people = [
 		role: 'Mobile Application & Design',
 		imageUrl:
 			'https://media-exp1.licdn.com/dms/image/C4E03AQGBCxvJx4mueA/profile-displayphoto-shrink_400_400/0/1616066740304?e=1654732800&v=beta&t=jnZ4uCsPzTqjcz7pb_dN0vkx5tuzOXesocgchcX8ljE',
-		bio: "Thomas travaille main dans la main avec Veronia pour offrir aux utilisateurs l'expérience la plus agréable possible.",
+		bio: 'Thomas works hand in hand with Veronia to provide users with the most enjoyable experience possible.',
 		twitterUrl: '#',
 		linkedinUrl: 'https://www.linkedin.com/in/pr0m3th3us/',
 	},
@@ -58,7 +58,7 @@ const people = [
 		role: 'Front-end',
 		imageUrl:
 			'https://media-exp1.licdn.com/dms/image/C560BAQEogO0_6QTmdg/company-logo_200_200/0/1594123399589?e=2147483647&v=beta&t=1Hmzh9dMnXr0NoXBJM9_rk5oHUuTHRH7iTUecF_C_Oo',
-		bio: "Le couteau suisse de l'équipe, Baptiste est polyvalent et peut offrir ses compétences sur plusieurs pans du projet.",
+		bio: 'The Swiss Army knife of the team, Baptiste is versatile and can offer his skills on several aspects of the project.',
 		twitterUrl: '#',
 		linkedinUrl: 'https://www.linkedin.com/in/pr0m3th3us/',
 	},
@@ -71,10 +71,10 @@ export default function Team() {
 			<div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
 				<div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
 					<div className="space-y-5 sm:space-y-4">
-						<h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Notre équipe</h2>
+						<h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Our Crew</h2>
 						<p className="text-xl text-gray-500">
-							Datadvisor est composé d&apos;une équipe de developpeur passioné qui prend très à coeurs le
-							respect des données privés.
+							Datadvisor is composed of a team of passionate developers who take the respect of private
+							data to heart.
 						</p>
 					</div>
 					<div className="lg:col-span-2">

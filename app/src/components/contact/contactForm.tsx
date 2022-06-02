@@ -63,13 +63,13 @@ export default function ContactForm() {
 			'how-can-we-help': '',
 			topic: 'other',
 		};
-		if (formContent['first-name'] === '') formState['first-name'] = 'Le prénom ne peut être vide';
+		if (formContent['first-name'] === '') formState['first-name'] = 'Content can not be empty';
 		else formState['first-name'] = '';
-		if (formContent['last-name'] === '') formState['last-name'] = 'Le nom ne peut être vide';
+		if (formContent['last-name'] === '') formState['last-name'] = 'Content can not be empty';
 		else formState['last-name'] = '';
-		if (formContent.email === '') formState.email = 'Le mail ne peut être vide';
+		if (formContent.email === '') formState.email = 'Content can not be empty';
 		else formState.email = '';
-		if (formContent['how-can-we-help'] === '') formState['how-can-we-help'] = 'Le contenu ne peut être vide';
+		if (formContent['how-can-we-help'] === '') formState['how-can-we-help'] = 'Content can not be empty';
 		else formState['how-can-we-help'] = '';
 		setErrorsContent(formState);
 	};
@@ -109,11 +109,11 @@ export default function ContactForm() {
 				<div className="py-24 bg-gray-50 sm:py-32">
 					<div className="max-w-md mx-auto pl-4 pr-8 sm:max-w-lg sm:px-6 lg:max-w-7xl lg:px-8">
 						<h1 className="text-4xl leading-10 font-extrabold tracking-tight text-gray-900 text-center sm:text-5xl sm:leading-none lg:text-6xl">
-							Contactez Datadvisor
+							Contact Datadvisor
 						</h1>
 						<p className="mt-6 max-w-3xl mx-auto text-xl leading-normal text-gray-500 text-center">
-							Notre équipe se fera un plaisir de répondre à vos questions ou de discuter avec vous
-							d&apos;un potentiel partenariat avec votre projet
+							Our team will be happy to answer your questions or discuss with you a potential partnership
+							with your project
 						</p>
 					</div>
 				</div>
@@ -133,12 +133,11 @@ export default function ContactForm() {
 						<div className="lg:pr-8">
 							<div className="max-w-md mx-auto sm:max-w-lg lg:mx-0">
 								<h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-									Que souhaitez-vous
+									What would you like
 								</h2>
 								<p className="mt-4 text-lg text-gray-500 sm:mt-3">
-									Notre équipe est très soucieuse de notre service client / relation entreprise. Il
-									est inscrit dans l&apos;ADN de notre workflow que la collaboration est une étape clé
-									vers la réussite
+									Our team cares deeply about our customer service/corporate relationship. It is in
+									the DNA of our workflow that collaboration is a key step towards success
 								</p>
 								<form
 									action="#"
@@ -147,7 +146,7 @@ export default function ContactForm() {
 								>
 									<div>
 										<label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
-											Prénom
+											First Name
 										</label>
 										<div className="mt-1">
 											<input
@@ -172,7 +171,7 @@ export default function ContactForm() {
 									</div>
 									<div>
 										<label htmlFor="last-name" className="block text-sm font-medium text-gray-700">
-											Nom
+											Last Name
 										</label>
 										<div className="mt-1">
 											<input
@@ -224,10 +223,10 @@ export default function ContactForm() {
 												htmlFor="company"
 												className="block text-sm font-medium text-gray-700"
 											>
-												Entreprise
+												Compagny
 											</label>
 											<span id="company-description" className="text-sm text-gray-500">
-												Optionnel
+												Optional
 											</span>
 										</div>
 
@@ -246,10 +245,10 @@ export default function ContactForm() {
 									<div className="sm:col-span-2">
 										<div className="flex justify-between">
 											<label htmlFor="phone" className="block text-sm font-medium text-gray-700">
-												Téléphone
+												Tel
 											</label>
 											<span id="phone-description" className="text-sm text-gray-500">
-												Optionnel
+												Optional
 											</span>
 										</div>
 										<div className="mt-1">
@@ -271,7 +270,7 @@ export default function ContactForm() {
 												htmlFor="how-can-we-help"
 												className="block text-sm font-medium text-gray-700"
 											>
-												Dites nous en plus
+												Tel us
 											</label>
 											<span id="how-can-we-help-description" className="text-sm text-gray-500">
 												Max. 500 chars.
@@ -311,7 +310,7 @@ export default function ContactForm() {
 													className="focus:ring-grape-500 h-4 w-4 text-grape-600 border-gray-300"
 												/>
 												<label htmlFor="topic-partenaire" className="ml-3">
-													<span className="block text-sm text-gray-700">Partenaire</span>
+													<span className="block text-sm text-gray-700">Partneship</span>
 												</label>
 											</div>
 											<div className="flex items-center">
@@ -337,7 +336,7 @@ export default function ContactForm() {
 													className="focus:ring-grape-500 h-4 w-4 text-grape-600 border-gray-300"
 												/>
 												<label htmlFor="topic-help" className="ml-3">
-													<span className="block text-sm text-gray-700">Aide</span>
+													<span className="block text-sm text-gray-700">Help</span>
 												</label>
 											</div>
 											<div className="flex items-center">
@@ -351,7 +350,7 @@ export default function ContactForm() {
 													defaultChecked={true}
 												/>
 												<label htmlFor="topic-other" className="ml-3">
-													<span className="block text-sm text-gray-700">Autre</span>
+													<span className="block text-sm text-gray-700">Other</span>
 												</label>
 											</div>
 										</div>
@@ -362,7 +361,7 @@ export default function ContactForm() {
 											onClick={onClick}
 											className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-grape-600 hover:bg-grape-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-grape-500"
 										>
-											Envoyer
+											Send
 										</button>
 										{formSended && (
 											<div className="mt-6 rounded-md bg-green-50 p-4 transition-all     animate-pulse">
@@ -375,7 +374,7 @@ export default function ContactForm() {
 													</div>
 													<div className="ml-3">
 														<p className="text-sm font-medium text-green-800">
-															Votre mail est parti avec succés
+															Request successfuly sended
 														</p>
 													</div>
 													<div className="ml-auto pl-3">
@@ -385,7 +384,7 @@ export default function ContactForm() {
 																onClick={() => setFormSended(false)}
 																className="inline-flex bg-green-50 rounded-md p-1.5 text-green-500 hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-green-50 focus:ring-green-600"
 															>
-																<span className="sr-only">Fermer</span>
+																<span className="sr-only">Close</span>
 																<XIcon className="h-5 w-5" aria-hidden="true" />
 															</button>
 														</div>

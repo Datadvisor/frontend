@@ -1,21 +1,21 @@
 describe('Contact Form', () => {
   it('Check if the page load correctly', () => {
     cy.visit('http://localhost:3000/')
-    cy.contains('Autre').click()
+    cy.contains('Other').click()
     cy.get('a[href*="contact"]').click()
 
-    cy.contains('Contactez Datadvisor')
+    cy.contains('Contact Datadvisor')
     cy.url().should('include', '/contact')
   })
 
   it('Check All errors', () => {
     cy.visit('http://localhost:3000/contact')
-    cy.contains('Envoyer').click()
+    cy.contains('Send').click()
 
-    cy.contains('Le prénom ne peut être vide')
-    cy.contains('Le nom ne peut être vide')
-    cy.contains('Le mail ne peut être vide')
-    cy.contains('Le contenu ne peut être vide')
+    cy.contains('Content can not be empty')
+    cy.contains('Content can not be empty')
+    cy.contains('Content can not be empty')
+    cy.contains('Content can not be empty')
   })
 
   it('Check first name error', () => {
@@ -25,11 +25,11 @@ describe('Contact Form', () => {
         .type('Roman')
         .should('have.value', 'Roman')
 
-    cy.contains('Envoyer').click()
+    cy.contains('Send').click()
 
-    cy.contains('Le nom ne peut être vide')
-    cy.contains('Le mail ne peut être vide')
-    cy.contains('Le contenu ne peut être vide')
+    cy.contains('Content can not be empty')
+    cy.contains('Content can not be empty')
+    cy.contains('Content can not be empty')
   })
 
   it('Check last name error', () => {
@@ -39,11 +39,11 @@ describe('Contact Form', () => {
         .type('Gascoin')
         .should('have.value', 'Gascoin')
 
-    cy.contains('Envoyer').click()
+    cy.contains('Send').click()
 
-    cy.contains('Le prénom ne peut être vide')
-    cy.contains('Le mail ne peut être vide')
-    cy.contains('Le contenu ne peut être vide')
+    cy.contains('Content can not be empty')
+    cy.contains('Content can not be empty')
+    cy.contains('Content can not be empty')
   })
 
   it('Check email error', () => {
@@ -53,11 +53,11 @@ describe('Contact Form', () => {
         .type('roman.gascoin@gmail.com')
         .should('have.value', 'roman.gascoin@gmail.com')
 
-    cy.contains('Envoyer').click()
+    cy.contains('Send').click()
 
-    cy.contains('Le prénom ne peut être vide')
-    cy.contains('Le nom ne peut être vide')
-    cy.contains('Le contenu ne peut être vide')
+    cy.contains('Content can not be empty')
+    cy.contains('Content can not be empty')
+    cy.contains('Content can not be empty')
   })
 
   it('Check contenu error', () => {
@@ -67,11 +67,11 @@ describe('Contact Form', () => {
         .type('cest mon text')
         .should('have.value', 'cest mon text')
 
-    cy.contains('Envoyer').click()
+    cy.contains('Send').click()
 
-    cy.contains('Le prénom ne peut être vide')
-    cy.contains('Le nom ne peut être vide')
-    cy.contains('Le mail ne peut être vide')
+    cy.contains('Content can not be empty')
+    cy.contains('Content can not be empty')
+    cy.contains('Content can not be empty')
   })
 
   it('Check validity sucess', () => {
@@ -90,8 +90,8 @@ describe('Contact Form', () => {
         .type('cest mon text')
         .should('have.value', 'cest mon text')
 
-    cy.contains('Envoyer').click()
+    cy.contains('Send').click()
 
-    cy.contains('Votre mail est parti avec succés')
+    cy.contains('success')
   })
 })
