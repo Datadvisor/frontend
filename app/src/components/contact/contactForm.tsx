@@ -112,7 +112,8 @@ export default function ContactForm() {
 							Contact Datadvisor
 						</h1>
 						<p className="mt-6 max-w-3xl mx-auto text-xl leading-normal text-gray-500 text-center">
-							Our team will be happy to answer your questions or discuss with you a potential partnership with your project
+							Our team will be happy to answer your questions or discuss with you a potential partnership
+							with your project
 						</p>
 					</div>
 				</div>
@@ -133,10 +134,10 @@ export default function ContactForm() {
 							<div className="max-w-md mx-auto sm:max-w-lg lg:mx-0">
 								<h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
 									What would you like
-
 								</h2>
 								<p className="mt-4 text-lg text-gray-500 sm:mt-3">
-									Our team cares deeply about our customer service/corporate relationship. It is in the DNA of our workflow that collaboration is a key step towards success
+									Our team cares deeply about our customer service/corporate relationship. It is in
+									the DNA of our workflow that collaboration is a key step towards success
 								</p>
 								<form
 									action="#"

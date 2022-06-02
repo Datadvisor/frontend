@@ -4,7 +4,7 @@ const people = [
 		role: 'Chief director executive',
 		imageUrl:
 			'https://media-exp1.licdn.com/dms/image/C5603AQHQ1pwbSFzSig/profile-displayphoto-shrink_400_400/0/1640647614267?e=1654732800&v=beta&t=v0GleiijOw5fT2yGZgqzXgnQYYX8yz6_kulIpV7Lcco',
-		bio: "Anthony is a business expert. Founder of the AM company, he is the right man to manage the team",
+		bio: 'Anthony is a business expert. Founder of the AM company, he is the right man to manage the team',
 		twitterUrl: '#',
 		linkedinUrl: 'https://www.linkedin.com/in/anthoni-marie/',
 	},
@@ -31,7 +31,7 @@ const people = [
 		role: 'Data Manager',
 		imageUrl:
 			'https://media-exp1.licdn.com/dms/image/C5603AQFuP71p65aUEQ/profile-displayphoto-shrink_400_400/0/1638489105871?e=1654732800&v=beta&t=Rw4izEV6QCmNxZ5HvM6JxBt73EKmOxU8tqf5NUuyOJo',
-		bio: "The wizard of the group. It is thanks to Brice that Dogmatix knows where to look for information from our users on the Internet.",
+		bio: 'The wizard of the group. It is thanks to Brice that Dogmatix knows where to look for information from our users on the Internet.',
 		twitterUrl: '#',
 		linkedinUrl: 'https://www.linkedin.com/in/brice-toffolon/',
 	},
@@ -49,7 +49,7 @@ const people = [
 		role: 'Mobile Application & Design',
 		imageUrl:
 			'https://media-exp1.licdn.com/dms/image/C4E03AQGBCxvJx4mueA/profile-displayphoto-shrink_400_400/0/1616066740304?e=1654732800&v=beta&t=jnZ4uCsPzTqjcz7pb_dN0vkx5tuzOXesocgchcX8ljE',
-		bio: "Thomas works hand in hand with Veronia to provide users with the most enjoyable experience possible.",
+		bio: 'Thomas works hand in hand with Veronia to provide users with the most enjoyable experience possible.',
 		twitterUrl: '#',
 		linkedinUrl: 'https://www.linkedin.com/in/pr0m3th3us/',
 	},
@@ -58,7 +58,7 @@ const people = [
 		role: 'Front-end',
 		imageUrl:
 			'https://media-exp1.licdn.com/dms/image/C560BAQEogO0_6QTmdg/company-logo_200_200/0/1594123399589?e=2147483647&v=beta&t=1Hmzh9dMnXr0NoXBJM9_rk5oHUuTHRH7iTUecF_C_Oo',
-		bio: "The Swiss Army knife of the team, Baptiste is versatile and can offer his skills on several aspects of the project.",
+		bio: 'The Swiss Army knife of the team, Baptiste is versatile and can offer his skills on several aspects of the project.',
 		twitterUrl: '#',
 		linkedinUrl: 'https://www.linkedin.com/in/pr0m3th3us/',
 	},
@@ -73,7 +73,8 @@ export default function Team() {
 					<div className="space-y-5 sm:space-y-4">
 						<h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Our Crew</h2>
 						<p className="text-xl text-gray-500">
-							Datadvisor is composed of a team of passionate developers who take the respect of private data to heart.
+							Datadvisor is composed of a team of passionate developers who take the respect of private
+							data to heart.
 						</p>
 					</div>
 					<div className="lg:col-span-2">

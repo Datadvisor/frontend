@@ -19,8 +19,7 @@ const features = [
 	},
 	{
 		name: 'Antiquitix',
-		description:
-			'Get our RGPD management tips to ensure that your unwanted data is deleted',
+		description: 'Get our RGPD management tips to ensure that your unwanted data is deleted',
 		icon: ScaleIcon,
 	},
 ];
@@ -35,8 +34,7 @@ export default function Features() {
 						How can we help you?
 					</p>
 					<p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-						We have various tools to ensure your anonymity on the web. Try some
-						for free right now.
+						We have various tools to ensure your anonymity on the web. Try some for free right now.
 					</p>
 				</div>
 

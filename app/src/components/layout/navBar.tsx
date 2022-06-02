@@ -44,7 +44,7 @@ const callsToAction = [
 const resources = [
 	{
 		name: 'Contact us',
-		description: "Need assistance, want to make a partnership?",
+		description: 'Need assistance, want to make a partnership?',
 		href: 'contact',
 		icon: SupportIcon,
 	},
