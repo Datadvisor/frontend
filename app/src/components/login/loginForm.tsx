@@ -11,6 +11,7 @@ type FormType = {
 import logo from '../../../public/logo.png';
 import google_logo from '../../../public/google_logo.png';
 import { UserContext } from '../../context/user/userContext';
+import Link from 'next/link';
 
 const LoginForm = () => {
 	const userContext = useContext(UserContext);
@@ -171,9 +172,11 @@ const LoginForm = () => {
 									</div>
 
 									<div className="text-sm">
-										<a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-											Forgot your password?
-										</a>
+										<Link href="/forgot_password">
+											<a className="font-medium text-indigo-600 hover:text-indigo-500">
+												Forgot your password?
+											</a>
+										</Link>
 									</div>
 								</div>
 
