@@ -3,24 +3,24 @@ import { CalendarIcon, GlobeAltIcon, ShieldExclamationIcon, ScaleIcon } from '@h
 
 const features = [
 	{
-		name: 'Idefix, le traqueur',
-		description: 'Chercher des informations publiques sur vous gratuitement !',
+		name: 'Idefix',
+		description: 'Search for public information about you for free!',
 		icon: GlobeAltIcon,
 	},
 	{
-		name: 'Panoramix, le rapporteur',
-		description: 'Obtenez des rapports personnalisés de votre présence tous les X temps.',
+		name: 'Panoramix',
+		description: 'Get customized reports of your presence every X time.',
 		icon: ShieldExclamationIcon,
 	},
 	{
-		name: 'Suivix, le mensuel',
-		description: 'Notre newsletter des infos importantes et bonnes pratiques.',
+		name: 'Suivix',
+		description: 'Our newsletter with important information and best practices.',
 		icon: CalendarIcon,
 	},
 	{
-		name: 'Antiquitix, le guide de survis',
+		name: 'Antiquitix',
 		description:
-			'Obtenez nos conseils en matière de gestion RGPD, pour garantir la suppression des données dont vous ne voulez plus',
+			'Get our RGPD management tips to ensure that your unwanted data is deleted',
 		icon: ScaleIcon,
 	},
 ];
@@ -32,11 +32,11 @@ export default function Features() {
 				<div className="lg:text-center">
 					<h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Datadvisor</h2>
 					<p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-						Comment pouvons-nous vous aidez ?
+						How can we help you?
 					</p>
 					<p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-						Nous disposons de divers outils afin de garantir votre anonymisation sur le web. Essayer en
-						gratuitement dès maintenant.
+						We have various tools to ensure your anonymity on the web. Try some
+						for free right now.
 					</p>
 				</div>
 

@@ -19,44 +19,44 @@ import Link from 'next/link';
 
 const solutions = [
 	{
-		name: 'Idefix, notre traqueur',
-		description: 'Chercher des informations publiques sur vous gratuitement !',
+		name: 'Idefix',
+		description: 'Search for public information about you for free!',
 		href: '#',
 		icon: SearchIcon,
 	},
 	{
-		name: 'Panoramix, le rapporteur',
-		description: 'Obtenez des rapports personnalisés de votre présence tous les X temps.',
+		name: 'Panoramix',
+		description: 'Get customized reports of your presence every X time.',
 		href: '#',
 		icon: CursorClickIcon,
 	},
 	{
-		name: 'Suivix, le mensuel',
-		description: 'Notre newsletter des infos importantes et bonnes pratiques.',
+		name: 'Suivix',
+		description: 'Our newsletter with important information and best practices.',
 		href: '#',
 		icon: ShieldCheckIcon,
 	},
 ];
 const callsToAction = [
-	{ name: 'Voir une demo', href: '#', icon: PlayIcon },
-	{ name: 'Nous contacter', href: '#', icon: PhoneIcon },
+	{ name: 'See our demo', href: '#', icon: PlayIcon },
+	{ name: 'Contact us', href: 'contact', icon: PhoneIcon },
 ];
 const resources = [
 	{
-		name: 'Contactez nous',
-		description: "Besoin d'assistance, envie de faire un partenariat ?",
+		name: 'Contact us',
+		description: "Need assistance, want to make a partnership?",
 		href: 'contact',
 		icon: SupportIcon,
 	},
 	{
 		name: 'Guide utilisateur',
-		description: 'Tout ce que vous devez savoir sur Datadvisor.',
+		description: 'Everything you need to know about Datadvisor.',
 		href: '#',
 		icon: BookmarkAltIcon,
 	},
 	{
-		name: 'Protection des données',
-		description: 'Nos règles en matière de RGPD, votre sécurité et notre priorité.',
+		name: 'Data protection',
+		description: 'Our RGPD rules, your security and our priority.',
 		href: '#',
 		icon: ShieldCheckIcon,
 	},
@@ -179,7 +179,7 @@ export default function NavBar() {
 											'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500',
 										)}
 									>
-										<span>Autre</span>
+										<span>Other</span>
 										<ChevronDownIcon
 											className={classNames(
 												open ? 'text-gray-600' : 'text-gray-400',
@@ -300,7 +300,7 @@ export default function NavBar() {
 						<div className="py-6 px-5 space-y-6">
 							<div className="grid grid-cols-2 gap-y-4 gap-x-8">
 								<a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-									Prix
+									Pricing
 								</a>
 
 								{resources.map((item) => (
